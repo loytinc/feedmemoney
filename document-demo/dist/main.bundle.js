@@ -72,7 +72,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"top\"></div>\r\n<div id=\"bottom\"></div>\r\n<form (submit)=\"onSubmit()\" *ngIf='!submitted.submit'>\r\n  <label>\r\n    <span>Name</span>\r\n    <input name=\"cardholder-name\" class=\"field\" placeholder=\"Jane Doe\" />\r\n  </label>\r\n  <label>\r\n    <span>Phone</span>\r\n    <input class=\"field\" placeholder=\"(123) 456-7890\" type=\"tel\" />\r\n  </label>\r\n  <label>\r\n    <span>ZIP code</span>\r\n    <input name=\"address-zip\" class=\"field\" placeholder=\"94110\" />\r\n  </label>\r\n  <label>\r\n    <span>Amount</span>\r\n    <input type=\"number\" name=\"amount\" class=\"field\" placeholder=\"Payment in USD\" \r\n    [(ngModel)] = 'charge.amount'\r\n    />\r\n  </label>\r\n  <label>\r\n    <span>Card</span>\r\n    <div id=\"card-element\" class=\"field\"></div>\r\n  </label>\r\n  <button type=\"submit\">Pay ${{charge.amount}}</button>\r\n  <div class=\"outcome\">\r\n    <div class=\"error\" role=\"alert\"></div>\r\n    <div class=\"success\">\r\n      Success! Your Stripe token is <span class=\"token\"></span>\r\n    </div>\r\n  </div>\r\n</form>\r\n\r\n<h2 *ngIf='submitted.submit' style=\"text-align: center; margin-top: 45%;\">Thank you for your payment of: ${{charge.amount}}</h2>\r\n<script type=\"text/javascript\">\r\n    \r\n    \r\n</script>"
+module.exports = "<div id=\"top\"></div>\r\n<div id=\"bottom\"></div>\r\n<form (submit)=\"onSubmit()\" *ngIf='!submitted.submit'>\r\n  <label>\r\n    <span>Name</span>\r\n    <input name=\"cardholder-name\" class=\"field\" placeholder=\"Jane Doe\" />\r\n  </label>\r\n  <label>\r\n    <span>Phone</span>\r\n    <input class=\"field\" placeholder=\"(123) 456-7890\" type=\"tel\" />\r\n  </label>\r\n  <label>\r\n    <span>ZIP code</span>\r\n    <input name=\"address-zip\" class=\"field\" placeholder=\"94110\" />\r\n  </label>\r\n  <label>\r\n    <span>Amount</span>\r\n    <input type=\"number\" name=\"amount\" class=\"field\" placeholder=\"Payment in USD\" \r\n    [(ngModel)] = 'charge.amount'\r\n    />\r\n  </label>\r\n  <label>\r\n    <span>Card</span>\r\n    <div id=\"card-element\" class=\"field\"></div>\r\n  </label>\r\n  <button type=\"submit\">Pay ${{charge.amount}}</button>\r\n  <div class=\"outcome\">\r\n    <div class=\"error\" role=\"alert\"></div>\r\n    <div class=\"success\">\r\n      Success! Your Stripe token is <span class=\"token\"></span>\r\n    </div>\r\n  </div>\r\n</form>\r\n\r\n<h2 *ngIf='submitted.submit' style=\"text-align: center; margin-top: 20%;\">Thank you for your payment of: ${{charge.amount}}</h2>\r\n<script type=\"text/javascript\">\r\n    \r\n    \r\n</script>"
 
 /***/ }),
 
@@ -252,6 +252,7 @@ var AppComponent = (function () {
         top.style.top = '-50%';
         top.style.animationName = 'topR';
         bottom.style.top = '150%';
+        bottom.style.height = '0%';
         bottom.style.animationName = 'bottomR';
     };
     return AppComponent;

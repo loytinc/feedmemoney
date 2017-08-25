@@ -180,7 +180,8 @@ export class AppComponent implements OnInit{
   	var bottom = document.querySelector('#bottom');
   	top.style.top = '-50%';
   	top.style.animationName = 'topR';
-  	bottom.style.top = '150%'
+  	bottom.style.top = '150%';
+  	bottom.style.height = '0%';
   	bottom.style.animationName = 'bottomR';
   }
  }
