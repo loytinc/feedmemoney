@@ -1,6 +1,6 @@
 <div id="top"></div>
 <div id="bottom"></div>
-<form (submit)="onSubmit()">
+<form (submit)="onSubmit()" *ngIf='!submitted.submit'>
   <label>
     <span>Name</span>
     <input name="cardholder-name" class="field" placeholder="Jane Doe" />
@@ -31,6 +31,8 @@
     </div>
   </div>
 </form>
+
+<h2 *ngIf='submitted.submit' style="text-align: center; margin-top: 45%;">Thank you for your payment of: ${{charge.amount}}</h2>
 <script type="text/javascript">
     
     

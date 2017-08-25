@@ -1,10 +1,5 @@
 var express = require('express');
-<<<<<<< HEAD
 var stripe = require('stripe')('sk_test_ilUXe066lcE65HDBSfOkwKbQ')
-=======
-var bodyParser = require('body-parser');
-var session = require('express-session');
->>>>>>> 37a31d3d6852261bd968b3ccb4b8f59b8eb9679d
 var path = require('path');
 var bodyParser = require('body-parser');
 

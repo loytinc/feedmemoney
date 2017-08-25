@@ -30,3 +30,13 @@
 	from {top: 150%;}
 	to {top: 50%;}
 }
+
+@keyframes topR{
+	from {top: 0%;}
+	to {top: -50%;}
+}
+
+@keyframes bottomR{
+	from {top: 50%;}
+	to {top: 150%;}
+}

@@ -8,10 +8,12 @@ import { AppComponent } from './app.component';
 
 import { HttpService } from './http.service';
 import { DocumentRef } from './document-ref';
+import { ResultComponent } from './result/result.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ResultComponent
   ],
   imports: [
     BrowserModule,
