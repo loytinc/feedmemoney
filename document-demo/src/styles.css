@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+#top, #bottom{
+  height: 50%;
+  width: 100%;
+  background-color: lightblue;
+  position: absolute;
+  z-index: 3;
+}
+
+#bottom{
+	top: 25%;
+	background-color: red;
+}
+
+body{
+	height: ;
+}
