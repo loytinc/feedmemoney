@@ -1,17 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
-#top, #bottom{
+.top, .bottom{
   height: 50%;
   width: 100%;
   background-color: lightblue;
   position: absolute;
   z-index: 3;
+  left: 0%;
 }
 
-#bottom{
-	top: 25%;
+.top{
+	top: 0%;
+	animation-name: top;
+	animation-duration: 1s;
+}
+
+.bottom{
+	top: 50%;
 	background-color: red;
+	animation-name: bottom;
+	animation-duration: 1s;
 }
 
-body{
-	height: ;
+@keyframes top{
+	from {top: -50%;}
+	to {top: 0%;}
+}
+
+@keyframes bottom{
+	from {top: 150%;}
+	to {top: 50%;}
 }

@@ -14,10 +14,16 @@
     <input name="address-zip" class="field" placeholder="94110" />
   </label>
   <label>
+    <span>Amount</span>
+    <input type="number" name="amount" class="field" placeholder="Payment in USD" 
+    [(ngModel)] = 'charge.amount'
+    />
+  </label>
+  <label>
     <span>Card</span>
     <div id="card-element" class="field"></div>
   </label>
-  <button type="submit">Pay $25</button>
+  <button type="submit">Pay ${{charge.amount}}</button>
   <div class="outcome">
     <div class="error" role="alert"></div>
     <div class="success">

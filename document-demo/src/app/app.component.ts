@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpService } from './http.service';
 // import { DocumentRef } from './document-ref';
 declare var document: any;
 declare var Stripe: any;
@@ -12,8 +13,11 @@ declare var Stripe: any;
 export class AppComponent implements OnInit{
   title = 'app';
   self = this;
+  charge = {
+  	amount: 100
+  };
   // constructor(private _docRef: DocumentRef){
-  constructor(){
+  constructor(private _http:HttpService){
 
   }
   onSubmit(){
@@ -52,8 +56,11 @@ export class AppComponent implements OnInit{
 	  if (result.token) {
 	    // Use the token to create a charge or a customer
 	    // https://stripe.com/docs/charges
-	    successElement.querySelector('.token').textContent = result.token.id;
-	    successElement.classList.add('visible');
+	    // successElement.querySelector('.token').textContent = result.token.id;
+	    // successElement.classList.add('visible');
+	    self._http.createCharge(result.token, self.charge.amount)
+	    .then()
+	    .catch();
 	  } else if (result.error) {
 	    errorElement.textContent = result.error.message;
 	    errorElement.classList.add('visible');
@@ -76,12 +83,23 @@ export class AppComponent implements OnInit{
 	  };
 	  stripe.createToken(card, extraDetails).then((event)=>{
 	  	console.log(event);
-	  	setOutcome(event);
 	  	if(!event.error){
 		  	console.log("you passed payment validation");
+		    self.bite();
 	  	}
+	  	setOutcome(event);
 	  });
 	});
+  }
+
+
+
+
+  bite(){
+  	var top = document.querySelector('#top');
+  	var bottom = document.querySelector('#bottom');
+  	top.className = 'top';
+  	bottom.className = 'bottom';
   }
  }
 
