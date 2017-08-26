@@ -1,5 +1,13 @@
 <div id="top"></div>
 <div id="bottom"></div>
+
+<div id="fmmHead">
+  <div id="fmmHT">
+    <h1 id="fmmHTC">Thank you from FeedMeMoney.com</h1>
+    <h2 id="fmmHTC2">Payment Processing Services for Life On Your Terms, Inc.</h2>
+  </div>
+</div>
+
 <form (submit)="onSubmit()" *ngIf='!submitted.submit'>
   <label>
     <span>Name</span>
@@ -15,8 +23,9 @@
   </label>
   <label>
     <span>Amount</span>
-    <input type="number" name="amount" class="field" placeholder="Payment in USD" 
+    <input type="number" name="amount" class="field" placeholder="Payment in USD"
     [(ngModel)] = 'charge.amount'
+
     />
   </label>
   <label>
@@ -32,8 +41,15 @@
   </div>
 </form>
 
-<h2 *ngIf='submitted.submit' style="text-align: center; margin-top: 20%;">Thank you for your payment of: ${{charge.amount}}</h2>
+<div *ngIf='submitted.submit' style="text-align: center;" id="fmmHead">
+  <div id="fmmHT">
+    <h1 id="fmmHTC">Welcome to FeedMeMoney.com</h1>
+    <h2 id="fmmHTC2">Payment Processing Services for Life On Your Terms, Inc.</h2>
+    <p>Thank you for your payment of: ${{charge.amount}}</p>
+  </div>
+</div>
+
 <script type="text/javascript">
-    
-    
+
+
 </script>

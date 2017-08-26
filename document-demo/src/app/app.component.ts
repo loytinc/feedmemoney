@@ -11,7 +11,7 @@ declare var Stripe: any;
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit{
-  title = 'app';
+  title = 'FeedMeMoney.com';
   self = this;
   charge = {
   	amount: 100
@@ -185,4 +185,3 @@ export class AppComponent implements OnInit{
   	bottom.style.animationName = 'bottomR';
   }
  }
-

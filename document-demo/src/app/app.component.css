@@ -18,7 +18,8 @@ body {
 }
 
 form {
-  width: 480px;
+  max-width: 480px;
+  width: auto;
   margin: 20px auto;
 }
 
@@ -114,4 +115,83 @@ button:active {
 .success .token {
   font-weight: 500;
   font-size: 13px;
+}
+
+
+/************************************************************************/
+/************************************************************************/
+
+/*************** Custom Header Theme ************************************/
+
+/************************************************************************/
+/************************************************************************/
+#fmmHead{
+  margin: 10px auto 10px auto;
+  padding: 10px auto 10px auto;
+  text-align: center;
+  display: flex;
+  background: rgba(0,255,50,.8);
+  border: 2px solid rgba(50,0,255,.8);
+
+}
+
+#fmmHT
+{
+    position:relative;
+    display: flex;
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+#fmmHT:before, #fmmHT:after
+{
+    content:"";
+    position:absolute;
+    z-index:-1;
+    -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    box-shadow:0 0 20px rgba(0,0,0,0.8);
+    top:0;
+    bottom:0;
+    left:10px;
+    right:10px;
+    -moz-border-radius:100px / 10px;
+    border-radius:100px / 10px;
+}
+
+#fmmHT:after
+{
+    right:10px;
+    left:auto;
+    -webkit-transform:skew(8deg) rotate(3deg);
+       -moz-transform:skew(8deg) rotate(3deg);
+        -ms-transform:skew(8deg) rotate(3deg);
+         -o-transform:skew(8deg) rotate(3deg);
+            transform:skew(8deg) rotate(3deg);
+}
+
+#fmmHTC{
+  flex-wrap: wrap;
+  animation-name: headerGo;
+  animation-iteration-count: infinite;
+  animation-duration: 13s;
+  color: #fff;
+
+}
+
+fmmHTC2
+@-webkit-keyframes headerGo {
+    0%   {background-color:red; }
+    25%  {background-color:yellow; }
+    50%  {background-color:blue; }
+    75%  {background-color:green; }
+    100% {background-color:red; }
+}
+@keyframes headerGo {
+    0%   {background-color:red; }
+    25%  {background-color:yellow; }
+    50%  {background-color:blue; }
+    75%  {background-color:green; }
+    100% {background-color:red; }
 }
