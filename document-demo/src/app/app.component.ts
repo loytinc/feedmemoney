@@ -28,7 +28,8 @@ export class AppComponent implements OnInit{
   }
   ngAfterViewInit(){
   	console.log(Stripe);
-  	var stripe = Stripe('pk_test_6pRNASCoBOKtIshFeQd4XMUh');
+  	var stripe = Stripe('pk_test_nMhSeXrCEMGIr16oWO3vCNca');
+
 	var elements = stripe.elements();
 
 	var card = elements.create('card', {

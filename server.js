@@ -1,5 +1,5 @@
 var express = require('express');
-var stripe = require('stripe')('sk_test_ilUXe066lcE65HDBSfOkwKbQ')
+var stripe = require('stripe')('sk_test_xkWDPQcIhIPU8NLIEFpo0O9G')
 var path = require('path');
 var bodyParser = require('body-parser');
 
