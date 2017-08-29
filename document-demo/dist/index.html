@@ -87,16 +87,28 @@
 
   @-webkit-keyframes headerGo {
       0%   {color:red; }
-      25%  {color:yellow; }
-      50%  {color:blue; }
-      75%  {color:green; }
+      25%  {
+        color:yellow;
+        text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+      }
+      50%  {color:lightblue; }
+      75%  {
+        color:lightgreen;
+        text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+      }
       100% {color:red; }
   }
   @keyframes headerGo {
       0%   {color:red; }
-      25%  {color:yellow; }
-      50%  {color:blue; }
-      75%  {color:green; }
+      25%  {
+        color:yellow;
+        text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+      }
+      50%  {color:lightblue; }
+      75%  {
+        color:lightgreen;
+        text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+      }
       100% {color:red; }
   }
   .ball {
